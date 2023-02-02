@@ -1,0 +1,192 @@
+.site-header {
+  .top-nav {
+    background-color: $main-color;
+    padding: 15px 0px;
+    .nav-content {
+      @include flex-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      .logo-holder {
+        h1 {
+          margin-bottom: 0px;
+          img {
+            width: 290px;
+            height: 85px;
+          }
+        }
+      }
+      .box-options {
+        @include flex-column;
+        gap: 10px;
+        .option {
+          @include flex-between;
+          align-items: flex-end;
+          width: 100%;
+          gap: 30px;
+          .follow {
+            @include flex-center;
+            justify-content: flex-start;
+            gap: 3px;
+            span {
+              font-weight: 500;
+              font-size: 14px;
+            }
+            .icon-holder {
+              @include flex-center;
+              justify-content: flex-start;
+              a {
+                padding: 7px 5px;
+                color: $white-color;
+                i,
+                svg {
+                  font-size: 17px;
+                }
+                transition: $sm-transition;
+                &:hover {
+                  transform: translateY(-6px);
+                }
+              }
+            }
+          }
+          .btn-lang {
+            @include flex-center;
+            padding: 6px 10px;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            background-color: $alt-color;
+            color: $white-color;
+            transition: $main-transition;
+            &:hover {
+              background-color: #f9bc05;
+            }
+            &:focus {
+              box-shadow: 0 0 0 0.25rem hsl(45deg 97% 47% / 45%);
+            }
+          }
+        }
+        .search-box {
+          @include flex-between;
+          width: 100%;
+          border-top: 1px solid $white-color;
+          padding-top: 10px;
+          input {
+            @include full-w-h;
+            width: 270px;
+            border: none;
+            padding: 7px 10px;
+            border-radius: 0px 3px 3px 0px;
+            font-size: 13px;
+            color: #959595;
+            caret-color: #959595;
+          }
+          .search-btn {
+            padding: 12.1px 11px;
+            border-radius: 3px 0px 0px 3px;
+            background-color: $alt-color;
+            transition: $main-transition;
+            &:hover {
+              background-color: #f9bc05;
+            }
+            &:focus {
+              box-shadow: 0 0 0 0.25rem hsl(45deg 97% 47% / 45%);
+            }
+          }
+        }
+      }
+      @include maxWidth(sm) {
+        .logo-holder {
+          width: 100%;
+          text-align: center;
+          img {
+            max-width: 100%;
+          }
+        }
+        .box-options {
+          width: 100%;
+          .search-box {
+            input {
+              width: 100%;
+            }
+            .search-btn {
+              padding: 12.3px 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom-nav {
+    padding: 0%;
+    border-bottom: 3px solid #008dab;
+    box-shadow: 0 17px 25px 0 #dbdbdb;
+    @include maxWidth(sm) {
+      padding: 10 0px;
+    }
+    .navbar-toggler {
+      padding: 2px 4px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 1;
+        @media (min-width: 767.98px) and (max-width: 991.98px) {
+          justify-content: space-between;
+        }
+        .nav-item {
+          position: relative;
+          .nav-link {
+            font-weight: 600;
+            padding: 13px 0px;
+            font-size: 14px;
+            i,
+            svg {
+              margin-right: 4px;
+            }
+            &.nav-icon {
+              padding: 14.8px 0px;
+              font-size: 17px;
+            }
+            &.drop-btn {
+              cursor: pointer;
+            }
+          }
+          .drop-list {
+            position: absolute;
+            top: 110px;
+            right: 0;
+            width: 170px;
+            background-color: $white-color;
+            box-shadow: 0 2px 8px 0 #dbdbdb;
+            visibility: hidden;
+            opacity: 0;
+            transition: $sm-transition;
+            .drop-item {
+              .drop-link {
+                display: block;
+                padding: 11px 15px;
+                font-size: 13px;
+                border-bottom: 1px solid #ebebeb;
+                transition: $sm-transition;
+                &:hover {
+                  background-color: #fbfbfb;
+                }
+              }
+            }
+            &.active {
+              top: 98%;
+              visibility: visible;
+              opacity: 1;
+              z-index: 111;
+            }
+          }
+        }
+      }
+    }
+  }
+}

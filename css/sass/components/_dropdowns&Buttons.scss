@@ -1,0 +1,37 @@
+.btn-archives {
+  padding: 5px 30px;
+  font-size: 13px;
+  border-radius: 70px;
+  background-color: transparent;
+  border: 2px solid #ffd559;
+  color: #ffd559;
+  transition: $sm-transition;
+  &:hover {
+    color: $white-color;
+    background-color: #ffd559;
+  }
+}
+
+.btn-more {
+  padding: 6px 35px;
+  font-size: 13px;
+  border-radius: 9px;
+  background-color: #4981b4;
+  color: $white-color;
+  transition: $sm-transition;
+  &:hover {
+    background-color: $extra-blue-color;
+  }
+}
+
+.btn-app {
+  background-color: $light-green-color;
+  color: $white-color;
+  padding: 11px 35px;
+  font-size: 11px;
+  border-radius: 10px;
+  &.install {
+    padding: 11px 13px;
+    font-size: 12px;
+  }
+}

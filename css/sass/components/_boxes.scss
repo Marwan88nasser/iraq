@@ -1,0 +1,20 @@
+.box-sticky {
+  position: absolute;
+  left: 0;
+  top: 9%;
+  @include flex-column;
+  gap: 15px;
+  background: #eff1f2;
+  border-radius: 0px 6px 6px 0px;
+  padding: 8px 10px;
+  z-index: 11;
+  .icon-holder {
+    @include circle(40px, 40px);
+    @include flex-center;
+    background-color: #cbcdd1;
+    i, svg {
+      color: #454b4d;
+      font-size: 20;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.main-heading {
+  font-size: 45px;
+  width: fit-content;
+  text-shadow: 2px 5px 0px #c7c2c2;
+}
+
+.sub-heading {
+  position: relative;
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 5px;
+  font-size: 19px;
+  font-weight: 600;
+  &.green {
+    &::before {
+      background-color: $extra-green-color;
+      width: 90%;
+      top: 68%;
+    }
+    @include maxWidth(md) {
+      &::before {
+        background-color: $extra-green-color;
+        width: 72%;
+        top: 68%;
+      }
+    }
+  }
+  i,
+  svg {
+    color: $gray-color;
+    color: #808080;
+    font-size: 20px;
+  }
+  &::before {
+    content: "";
+    @include center-position;
+    width: 67%;
+    height: 0.1px;
+    background-color: #cccccc;
+  }
+  @include maxWidth(md) {
+    &::before {
+      width: 70%;
+      top: 30px;
+    }
+  }
+}
