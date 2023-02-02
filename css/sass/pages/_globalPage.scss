@@ -88,9 +88,8 @@ input {
 .app {
   @include maxWidth(md) {
     .main-heading {
-      margin-bottom: 3rem!important;
+      margin-bottom: 3rem !important;
     }
-
   }
   .main-heading {
     margin-bottom: 150px;
@@ -137,3 +136,30 @@ input {
   }
 }
 // End App
+
+.subscribe {
+  @include maxWidth(md) {
+    .main-heading {
+      margin-top: 0rem !important;
+    }
+  }
+  .main-heading {
+    margin-top: 125px;
+    margin-bottom: 3rem;
+  }
+  .subscribe-content {
+    background-image: url("../images/subscribe-bg.png");
+    .subscribe-box {
+      text-align: center;
+      .title {
+        color: #4d4d4d;
+        font-size: 34px;
+        margin-bottom: 45px;
+        &.sm {
+          margin-bottom: 35px;
+          font-size: 25px !important;
+        }
+      }
+    }
+  }
+}
